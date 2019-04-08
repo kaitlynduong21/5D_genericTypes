@@ -5,11 +5,11 @@
 public class FibPair {
     public static void main(String[] commandLine) {
         System.out.println();
-        
+
         // calculate next pair, Fibonacci-style
         nextText( 8, 5, "[13,8]");
         nextText( 3, 2, "[5,3]");
-        
+
         /* optional extra education: Fibonacci numbers
            recursively, and in linear time */
         // oneFib(  0, 0);  // base case
@@ -19,13 +19,13 @@ public class FibPair {
 
         // System.out.println( "no noticeable delay before...");
         // oneFib( 46, 1836311903);
-          /* value from 
+          /* value from
              stackoverflow.com/questions/15065088/upper-limits-for-fibonnacci
              but adjusted because they index from 1. Who ARE these people?
            */
     }
-    
-    
+
+
     /**
       test nextPairAfter
      */
@@ -35,13 +35,13 @@ public class FibPair {
                                 ) {
 
         // code here to make a pair from the params
+        Pair<Integer> p = new Pair<Integer> (bigger, smaller);
 
         System.out.println(
             "The pair after "
-          // + ?? the pair you made
-          // + " is " + nextPairAfter( ?? the pair you made)
-          + " ...expecting " + expect
-          + System.lineSeparator());
+            + nextPairAfter(p)
+            + " ...expecting " + expect
+            + System.lineSeparator());
      }
 
 
@@ -53,8 +53,9 @@ public class FibPair {
         the big number is the sum of the given pair
         the small number is the the old big number
      */
-    private static ?? nextPairAfter( ??) {
-        return ?? the next pair;
+    private static Pair<Integer> nextPairAfter(Pair<Integer> previous) {
+      Pair<Integer> next = new Pair<Integer> (previous.getFirst() + previous.getSecond(), previous.getFirst());
+      return next;
     }
 
 
@@ -77,7 +78,7 @@ public class FibPair {
       Calculate a Fibonacci number recursively
       and in linear time.
       optional extra education
-      
+
       @return the nth Fibonacci number
               n >= 0
      */

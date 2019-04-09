@@ -50,17 +50,17 @@ in [UserOfPair](https://github.com/stuyvesant-cs/solutionsHolmes/blob/650c94c91d
 
 - successful instantiation of an instance of such a class:
 ```
-mm = minmax( many);
+return new Pair<String>(min, max);
 ```
-in [class](URL)
+in [UserOfPair](https://github.com/stuyvesant-cs/solutionsHolmes/blob/650c94c91da1ad1b815e13c35c5816c2419446e5/2019-04-05_PairOfGenerics/UserOfPair.java#L46)
 
 
 - *un*successful instantiation of an instance of such a class,
 caught by the compiler:
 ```
-
+new Pair<String>( "a string", Integer.valueOf( 7));
 ```
-in [Pair]()
+in [UserSavedByCompiler](https://github.com/stuyvesant-cs/solutionsHolmes/blob/650c94c91da1ad1b815e13c35c5816c2419446e5/2019-04-05_PairOfGenerics/UserSavedByCompiler.java#L12)
 
 
 - a variable that can hold a reference to an instance of the generic type
